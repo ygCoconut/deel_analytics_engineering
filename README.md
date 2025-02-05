@@ -1,5 +1,5 @@
 # Case Study Evaluation Instructions
-- You can find a general description of the tasks under `Deel - Files.pdf``
+- You can find a general description of the tasks under `Deel - Files.pdf`
 - You can find Task 1 in `part_1_exploration_ingestion.ipynb` and the data profiling under `eda_reports/`
 - You can find the answers to the 3 questions of Task 2 here:
   1. What is the acceptance rate over time?
