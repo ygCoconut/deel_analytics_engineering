@@ -1,3 +1,8 @@
+# Case Study Evaluation Instructions
+1. You can find a general description of the tasks under `Deel - Files.pdf``
+2. You can find Task 1 in `part_1_exploration_ingestion.ipynb` and the data profiling under `eda_reports/`
+3. You can find the outputs of Task 2 in `outputs_task_2/`
+
 # Setup
 1. Rename `.env.template` to `.env`
 1. Start a postgres container by running the following command, according to your .env file:
