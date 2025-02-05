@@ -1,0 +1,10 @@
+
+version: 2
+
+sources:
+  - name: raw_layer
+    database: prod_dwh  
+    schema: raw  
+    tables:
+      - name: src_globepay__acceptance_report
+      - name: src_globepay__chargeback_report

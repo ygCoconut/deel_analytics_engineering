@@ -1,0 +1,61 @@
+
+version: 2
+
+models:
+  - name: acceptance_rate_by_day
+    description: "Daily acceptance rate of transactions, including the total transactions and accepted transactions count."
+    columns:
+      - name: date
+        description: "The date of the transactions."
+      - name: total_transactions
+        description: "The total number of transactions on that day."
+      - name: accepted_transactions
+        description: "The number of transactions that were accepted on that day."
+      - name: acceptance_rate
+        description: "The ratio of accepted transactions to total transactions on that day."
+
+  - name: amount_declined_over_25m_by_country
+    description: "Report showing the total declined amount over 25 million USD by country."
+    columns:
+      - name: amount_usd
+        description: "The total amount of declined transactions in USD, rounded to two decimal places."
+      - name: country
+        description: "Country where the transactions occurred."
+
+  - name: transactions_missing_chargeback
+    description: "Report showing transactions that are missing chargebacks, ordered by date."
+    columns:
+      - name: external_ref
+        description: "External reference identifier"
+        datatests:
+          - unique
+          - not_null
+      - name: ref
+        description: "Reference identifier for the transaction"
+        datatests:
+          - unique
+          - not_null
+      - name: is_chargeback
+        description: "Indicates whether the transaction is a chargeback."
+      - name: source
+        description: "Source of the payment"
+      - name: country
+        description: "Country where the payment was made"
+      - name: currency
+        description: "Currency used in the transaction"
+      - name: rate
+        description: "Exchange rates used for the transaction. amount/rate = amount_usd"
+      - name: amount
+        description: "Amount of the transaction in local currency. amount/rate = amount_usd"
+      - name: amount_usd
+        description: "Amount of the transaction in USD. amount/rate = amount_usd"
+      - name: date_time
+        description: "Timestamp of the transaction (with time)"
+      - name: date
+        description: "Date of the transaction (without time)"
+      - name: status
+        description: "Status of the payment."
+      - name: is_accepted
+        description: "Boolean indicating if the transaction was accepted"
+      - name: has_cvv_provided
+        description: "Indicates whether CVV was provided for the transaction"

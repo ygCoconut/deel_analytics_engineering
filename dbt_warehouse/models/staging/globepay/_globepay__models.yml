@@ -1,0 +1,50 @@
+version: 2
+
+models:
+  - name: stg_globepay__acceptance_report
+    description: "Staging model for Globepay acceptance report"
+    columns:
+      - &external_ref
+        name: external_ref
+        description: "External reference identifier"
+        datatests:
+          - unique
+          - not_null
+      - name: ref
+        description: "Reference identifier for the transaction"
+        datatests:
+          - unique
+          - not_null
+      - &source
+        name: source
+        description: "Source of the payment"
+      - name: country
+        description: "Country where the payment was made"
+      - name: currency
+        description: "Currency used in the transaction"
+      - name: rate
+        description: "Exchange rates used for the transaction"
+      - name: amount
+        description: "Amount of the transaction in local currency"
+      - name: amount_usd
+        description: "Amount of the transaction in USD"
+      - name: date_time
+        description: "Timestamp of the transaction (with time)"
+      - name: date
+        description: "Date of the transaction (without time)"
+      - name: status
+        description: "Status of the payment."
+      - name: is_accepted
+        description: "Boolean indicating if the transaction was accepted"
+      - name: has_cvv_provided
+        description: "Indicates whether CVV was provided for the transaction"
+
+  - name: stg_globepay__chargeback_report
+    description: "Staging model for Globepay chargeback report"
+    columns:
+      - *external_ref
+      - *source
+      - name: is_chargeback
+        description: "Indicates whether transaction was charged back or not"
+
+
