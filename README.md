@@ -1,16 +1,16 @@
 # Case Study Evaluation Instructions
-1. You can find a general description of the tasks under `Deel - Files.pdf``
-2. You can find Task 1 in `part_1_exploration_ingestion.ipynb` and the data profiling under `eda_reports/`
-3. You can find the outputs of Task 2 in `outputs_task_2/` and the models responding to the 3 questions under `dbt_warehouse/models/marts/payments/`
+- You can find a general description of the tasks under `Deel - Files.pdf``
+- You can find Task 1 in `part_1_exploration_ingestion.ipynb` and the data profiling under `eda_reports/`
+- You can find the answers to the 3 questions of Task 2 here:
   1. What is the acceptance rate over time?
-    - `dbt_warehouse/models/marts/payments/acceptance_rate_by_day.sql`
-    - `output_task_2/acceptance_rate_by_day.csv`
+    - dbt model: `dbt_warehouse/models/marts/payments/acceptance_rate_by_day.sql`
+    - output: `output_task_2/acceptance_rate_by_day.csv`
   2. List the countries where the amount of declined transactions went over $25M
-    - `dbt_warehouse/models/marts/payments/amount_declined_over_25m_by_country.sql`
-    - `output_task_2/amount_declined_over_25m_by_country.csv`
+    - dbt model: `dbt_warehouse/models/marts/payments/amount_declined_over_25m_by_country.sql`
+    - output: `output_task_2/amount_declined_over_25m_by_country.csv`
   3. Which transactions are missing chargeback data?
-    - `dbt_warehouse/models/marts/payments/transactions_missing_chargeback.sql`
-    - `output_task_2/transactions_missing_chargeback.csv`
+    - dbt model: `dbt_warehouse/models/marts/payments/transactions_missing_chargeback.sql`
+    - output: `output_task_2/transactions_missing_chargeback.csv`
 
 
 # Setup
